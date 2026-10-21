@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+    <style>
+        a:hover { background-color: yellow; }
+        a.active { background-color: red; }
+
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; }
+        h1 { margin-top: 30px; }
+        p  { margin: 8px 0; }
+    </style>
+</head>
+<body>
+
+<h1>Меню</h1>
+<ul>
+    <li><a href="main.html">Главная страница</a></li>
+    <li><a href="info.html">Информационная страница с главами</a></li>
+    <li><a href="test_img.html">Фото</a></li>
+    <li><a href="form.html" class="active">Форма</a></li>
+    <li><a href="passport.html">Паспорт</a></li>
+    <li><a href="table.html">Таблица</a></li>
+    <li><a href="task.html">Задача</a></li>
+    <li><a href="DOM.html">Считывание из DOM</a></li>
+    <li><a href="https://bem-msk.ru/" target="_blank">Внешний сайт</a></li>
+    <li>
+        <a href="https://bem-msk.ru/" target="_blank">
+            <img src="image/massage.jpg" width="20" alt="БЭМ">
+        </a>
+    </li>
+</ul>
+
+<!-- ===================== ФОРМА 1 ===================== -->
+<h1>Форма 1: Запись на сеанс биоэлектрического массажа</h1>
+<form action="https://httpbin.org/post" id="UserEnter1" name="UserEnter1" target="_blank" method="post">
+
+    <p>Ваше ФИО: <input type="text" name="patient_fio" placeholder="Иванов Иван Иванович" required></p>
+    <p>Ваша группа: <input type="text" name="patient_group" placeholder="Г06у28" required></p>
+    <p>Ваш возраст: <input type="number" name="patient_age" min="0" max="100" value="25" required></p>
+    <p>Ваш номер телефона: <input type="tel" name="patient_phone" placeholder="+7 (999) 123-45-67" required></p>
+    <p>Ваша электронная почта: <input type="email" name="patient_email" placeholder="ivan@example.ru" required></p>
+    <p>Укажите дату отправки: <input name="send_date" type="date" value="2000-01-01" required></p>
+
+    <p>
+        <input type="submit" value="Отправить">
+        <input type="reset"  value="Очистить">
+    </p>
+</form>
+
+<!-- ===================== ФОРМА 2 ===================== -->
+<h1>Форма 2: Заказ процедур и отзыв о сеансе БЭМ</h1>
+<form action="https://httpbin.org/post" id="UserEnter2" name="UserEnter2" target="_blank" method="post">
+
+    <p>Ваше ФИО: <input type="text" name="patient_fio" placeholder="Иванов Иван Иванович" required></p>
+
+    <p><b>Какую процедуру хотите заказать:</b><br>
+        <input type="radio" name="procedure" value="back"    checked> Спина и шейно-воротниковая зона<br>
+        <input type="radio" name="procedure" value="legs">        Нижние конечности<br>
+        <input type="radio" name="procedure" value="arms">        Верхние конечности<br>
+        <input type="radio" name="procedure" value="full">        Общий массаж<br>
+    </p>
+
+    <p>Комментарий (ваши жалобы / пожелания)<br>
+        <textarea name="comment" cols="40" rows="3" placeholder="Например: боли в пояснице после тренировок"></textarea>
+    </p>
+
+    <p>Дата процедуры: <input name="procedure_date" type="date" value="2000-01-01"></p>
+    <p>Курс процедур (ползунок): <input name="course_count" type="range" min="1" max="20" value="10">
+        <small>1–20 сеансов</small>
+    </p>
+
+    <p>Пароль для подтверждения записи: <input name="patient_password" size="9" type="password" required></p>
+
+    <p>Используете ли вы кардиостимулятор:
+        <input type="checkbox" name="has_pacemaker" value="yes">
+        <small>Противопоказание для БЭМ</small>
+    </p>
+
+    <p>Сколько сеансов вы уже прошли ранее:
+        <input type="number" name="previous_sessions" min="0" max="100" value="0">
+    </p>
+
+    <input type="hidden" name="source" value="website_form">
+
+    <p>
+        <input type="submit" value="Отправить">
+        <input type="reset"  value="Очистить">
+    </p>
+</form>
+
+</body>
+</html>

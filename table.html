@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Показания и противопоказания биоэлектрического массажа</title>
+    <style>
+        a:hover { background-color: yellow; }
+        a.active { background-color: red; }
+
+        /* Фон всей таблицы */
+        .main-table {
+            width: 600px;
+            margin: 0 auto;
+            border: 2px solid #000;
+            border-collapse: separate;
+            border-spacing: 15px;
+            background-image: url('image/backgroundtable.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Полупрозрачный фон ячеек, чтобы просвечивал фон таблицы */
+        .main-table > tbody > tr > td {
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.75);
+        }
+
+        .cell-right  { text-align: right; vertical-align: top; }
+        .cell-right2 { text-align: right; vertical-align: middle; }
+        .cell-center { text-align: center; }
+
+        .caption { font-size: 0.85em; color: #333; }
+
+        /* Миниатюра до 100px, кликабельна */
+        .thumb {
+            width: 80px;
+            height: auto;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+
+        /* «Импульсный ток»: белый текст на тёмной подложке */
+        .tok-bg {
+            color: #ffffff;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px #000;
+            background-color: #333333;
+            background-image: url('image/tok.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Показания — зелёная ячейка */
+        .green-bg { background-color: rgba(0, 128, 0, 0.55) !important; }
+
+        /* Противопоказания — красная ячейка */
+        .red-bg { background-color: rgba(220, 0, 0, 0.55) !important; }
+
+        /* Вложенная таблица «Сеанс / Курс» */
+        .inner-table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+            border: 1px solid #555;
+        }
+        .inner-table td {
+            border: 1px solid #555;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+    </style>
+</head>
+<body>
+
+<h1>Меню</h1>
+<ul>
+    <li><a href="main.html">Главная страница</a></li>
+    <li><a href="info.html">Информационная страница с главами</a></li>
+    <li><a href="test_img.html">Фото</a></li>
+    <li><a href="form.html">Форма</a></li>
+    <li><a href="passport.html">Паспорт</a></li>
+    <li><a href="table.html" class="active">Таблица</a></li>
+    <li><a href="task.html">Задача</a></li>
+    <li><a href="DOM.html">Считывание из DOM</a></li>
+    <li><a href="https://bem-msk.ru/" target="_blank" >Внешний сайт</a></li>
+    <li>
+        <a href="https://bem-msk.ru/" target="_blank">
+            <img src="image/massage.jpg" width="20" alt="Логотип БЭМ">
+        </a>
+    </li>
+</ul>
+
+<h2 style="text-align:center;">Показания и противопоказания биоэлектрического массажа</h2>
+
+<table class="main-table">
+
+    <!-- Строка 1: миниатюра → большое фото 600×400 | пусто | импульсный ток -->
+    <tr>
+        <td class="cell-right">
+            <a href="image/apparatbig.jpg" target="_blank">
+                <img src="image/apparat.jpg" class="thumb" alt="Аппарат БЭМ — миниатюра">
+            </a><br>
+            <span class="caption">Аппарат БЭМ (клик — открыть фото 600×400)</span>
+        </td>
+
+        <td></td>
+
+        <td class="tok-bg">
+            Импульсный ток
+        </td>
+    </tr>
+
+    <!-- Строка 2: объединённая ячейка -->
+    <tr>
+        <td colspan="3" class="cell-center">Зона воздействия: спина и шейно-воротниковая зона</td>
+    </tr>
+
+    <!-- Строка 3: показания (зелёная) / противопоказания (красная) -->
+    <tr>
+        <td class="green-bg" style="height:300px;">
+            <strong>Показания:</strong><br>
+            <ul>
+                <li>Остеохондроз</li>
+                <li>Мышечные спазмы</li>
+                <li>Нарушение кровообращения</li>
+                <li>Реабилитация после травм</li>
+            </ul>
+        </td>
+        <td class="red-bg">
+            <strong>Противопоказания:</strong><br>
+            Кардиостимулятор, беременность, онкология
+        </td>
+    </tr>
+
+    <!-- Строка 4: вложенная таблица «Сеанс/Курс» + картинка справа -->
+    <tr>
+        <td>
+            <table class="inner-table">
+                <tr>
+                    <td style="padding: 0;">
+                        <img src="image/procedura.jpg" alt="Процедура"
+                             style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </td>
+                    <td>Сеанс 20 минут</td>
+                </tr>
+                <tr>
+                    <td>Курс 10 процедур</td>
+                    <td>Электроды на теле</td>
+                </tr>
+            </table>
+        </td>
+
+        <td class="cell-right2">
+            <img src="image/diploma.jpg" alt="Справа" width="300" style="margin:15px;">
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>

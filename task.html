@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача</title>
+    <style>
+        a:hover { background-color: yellow; }
+        a.active { background-color: red; }
+
+        .result-box {
+            margin-top: 15px;
+            padding: 10px;
+            font-weight: bold;
+        }
+        .ok   { color: green; }
+        .fail { color: red; }
+    </style>
+</head>
+<body>
+
+<h1>Меню</h1>
+<ul>
+    <li><a href="main.html">Главная страница</a></li>
+    <li><a href="info.html">Информационная страница с главами</a></li>
+    <li><a href="test_img.html">Фото</a></li>
+    <li><a href="form.html">Форма</a></li>
+    <li><a href="passport.html">Паспорт</a></li>
+    <li><a href="table.html">Таблица</a></li>
+    <li><a href="task.html" class="active">Задача</a></li>
+    <li><a href="DOM.html">Считывание из DOM</a></li>
+    <li><a href="https://bem-msk.ru/" target="_blank" >Внешний сайт</a></li>
+    <li>
+        <a href="https://bem-msk.ru/" target="_blank">
+            <img src="image/massage.jpg" width="20" alt="БЭМ">
+        </a>
+    </li>
+</ul>
+
+<p name="formulation">
+    Дано число X. Определить, принадлежит ли это число заданному промежутку [a, b].
+</p>
+
+<form action="https://httpbin.org/post" id="UserEnter" name="UserEnter" target="_blank" method="post">
+    <ul>
+        <li>Формулировка задачи
+            <br>
+            <textarea cols="60" rows="4" id="task" name="formulation">Дано число X. Определить, принадлежит ли это число заданному промежутку [a, b].</textarea>
+        </li>
+        <li>Число X: <input id="X" name="X" type="number" value="5" step="any"></li>
+        <li>Начало отрезка a: <input id="a" name="a" type="number" value="1" step="any"></li>
+        <li>Конец отрезка b: <input id="b" name="b" type="number" value="10" step="any"></li>
+        <li>Результат решения задачи:
+            <input id="result" name="result" value="не определен" size="40">
+        </li>
+        <li>Действие: <input id="verify" type="button" value="Проверить"></li>
+        <li>Действие: <input id="send" type="submit" value="Отправить на сервер"></li>
+    </ul>
+</form>
+
+<div id="message" class="result-box"></div>
+
+<script src="./scripts/task.js"></script>
+
+</body>
+</html>

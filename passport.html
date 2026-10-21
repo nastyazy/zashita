@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+          a:hover {
+            background-color: yellow;
+        }
+
+        a.active {
+         background-color: red;
+}
+    </style>
+    <title>Паспорт</title>
+      <style type="text/css">
+          body{
+              background-image: url(image/pass.jfif);
+            background-position: left 265px;
+            background-repeat: no-repeat;
+          }
+          .fam{
+            margin-left: 150px;
+            margin-top: 293px;
+          }
+          .imya{
+            margin-left: 140px;
+            margin-top: 22px;
+          }
+          .otc{
+            margin-left: 150px;
+            margin-top: 3px;
+          }
+          .date{
+            margin-left: 135px;
+            margin-top: 1px;
+          }
+          .img{
+            margin-left: 10px;
+            margin-top: -70px;
+          }
+          .date_vid{
+            margin-left: 65px;
+            margin-top: -324px;
+          }
+          .vid{
+            margin-left: 90px;
+            margin-top: -77px;
+          }
+          .place{
+            margin-left: 160px;
+            margin-top: 317px;
+          }
+          .button{
+            margin-left: 10px;
+            margin-top: 120px;
+          }
+      </style>
+  </head>
+  <body>
+<h1> menu </h1>
+<ul>
+    <li> <a href='main.html'>  Главная страница </a> </li>
+    <li> <a href='info.html'>  Информационная страница с главами </a> </li>
+    <li> <a href='test_img.html'> Фото </a> </li>
+    <li> <a href="form.html"> Форма </a> </li>
+    <li> <a href='passport.html' class="active">Паспорт </a> </li>
+    <li> <a href='table.html' >Таблица </a> </li>
+    <li> <a href='task.html'>Задача </a> </li>
+    <li> <a href='DOM.html'>Считывание из DOM</a> </li>
+        <li> <a href="https://bem-msk.ru/" target="_blank"> Внешний сайт </a> </li>
+    <li> <a href="https://bem-msk.ru/" target="_blank"><img src="image/massage.jpg" width= "20px" alt="" /></a></li>
+</ul>
+
+
+<div class="fam">Зыонг</div>
+<div class="imya">Анастасия</div>
+<div class="otc">Ламовна</div>
+<div class="date"> Жен &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 16.04.2007 </div>
+<div class="img"> <img src="image/men.jpg" height="110" width="100"> </div>
+<div class="date_vid"> 01.01.2019&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;770-070 </div>
+<div class="vid"> МВД ПО РЕСПУБЛИКЕ ТЫВА </div>
+<div class="place"> Г.КЫЗЫЛ </div>
+<button class="button" id="change"> Заменить </button>
+
+</body>
+<script src = "./scripts/pass.js"> </script>
+</html>

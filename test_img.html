@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фотокарточки — БЭМ</title>
+    <style>
+        figure {
+            background: #5f6a72;
+            padding: 10px;
+            display: block;
+            float: left;
+            margin: 0 10px 10px 0;
+            text-align: center;
+        }
+        figcaption {
+            color: #ffffff;
+        }
+
+        a:hover  { background-color: yellow; }
+        a.active { background-color: red; }
+    </style>
+</head>
+<body>
+
+<h1>Меню</h1>
+<ul>
+    <li><a href="main.html">Главная страница</a></li>
+    <li><a href="info.html">Информационная страница с главами</a></li>
+    <li><a href="test_img.html" class="active">Фото</a></li>
+    <li><a href="form.html">Форма</a></li>
+    <li><a href="passport.html">Паспорт</a></li>
+    <li><a href="table.html">Таблица</a></li>
+    <li><a href="task.html">Задача</a></li>
+    <li><a href="DOM.html">Считывание из DOM</a></li>
+    <li><a href="https://bem-msk.ru/" target="_blank">Внешний сайт</a></li>
+    <li>
+        <a href="https://bem-msk.ru/" target="_blank">
+            <img src="image/massage.jpg" width="20" alt="БЭМ">
+        </a>
+    </li>
+</ul>
+
+<article>
+
+    <!-- 1. Аппарат БЭМ -->
+    <figure>
+        <p><img src="image/apparat.jpg" alt="Аппарат БЭМ" width="200"></p>
+        <figcaption>Аппарат биоэлектрического массажа</figcaption>
+    </figure>
+
+    <!-- 2. Процедура -->
+    <figure>
+        <p><img src="image/procedura.jpg" alt="Процедура БЭМ" width="200"></p>
+        <figcaption>Сеанс БЭМ: электроды на теле</figcaption>
+    </figure>
+
+    <!-- 3. Внешняя картинка (из интернета) -->
+    <figure>
+        <p><img src="image/tok.png"
+                alt="Импульсный ток" width="200"></p>
+        <figcaption>Импульсный ток — принцип воздействия</figcaption>
+    </figure>
+
+    <!-- 4. Фото-ссылка на большое фото 600×400 в новом окне -->
+    <figure>
+        <p>
+            <a href="image/apparatbig.jpg" target="_blank">
+                <img src="image/apparat.jpg" width="80" alt="Аппарат БЭМ — миниатюра">
+            </a>
+        </p>
+        <figcaption>Аппарат БЭМ (клик — открыть фото 600×400)</figcaption>
+    </figure>
+
+</article>
+
+</body>
+</html>
